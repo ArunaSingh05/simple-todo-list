@@ -1,0 +1,11 @@
+<div id="myDIV" class="header">
+  <h2 style="margin:5px">My To Do List</h2>
+  <input type="text" id="myInput" [(ngModel)]="todoItem" name="todoItem" placeholder="Title...">
+  <span  class="addBtn" (click)="addTodoItem()">Add</span>
+</div>
+
+<ul id="myUL">
+  <app-todo-item *ngFor="let item of todoItemList;let i= index"
+  [item]="{name:item,id:i}"
+   (removeFromList)="removeTodoItem($event)"> </app-todo-item>
+</ul>

@@ -1,0 +1,3 @@
+<li (click)="addClassChecked()" [ngClass]="{'checked':isChecked}" *ngIf="item?.name"> {{item?.name}}
+   <span class="close" (click)="removeItem()">×</span>
+  </li>
